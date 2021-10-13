@@ -161,7 +161,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1079957950}
   m_Lens:
-    FieldOfView: 22
+    FieldOfView: 10
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -182,14 +182,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251572433}
-  m_LocalRotation: {x: 0.23344536, y: 0, z: 0, w: 0.97236997}
-  m_LocalPosition: {x: -8.39, y: 22.726393, z: -35.48919}
+  m_LocalRotation: {x: 0.14780942, y: 0, z: 0, w: 0.9890159}
+  m_LocalPosition: {x: -8.39, y: 37.406506, z: -105.2561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 339630125}
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 27, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 17, y: 0, z: 0}
 --- !u!1 &339630124
 GameObject:
   m_ObjectHideFlags: 3
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
   m_ScreenY: 0.6491659
-  m_CameraDistance: 40
+  m_CameraDistance: 110
   m_DeadZoneWidth: 0.5
   m_DeadZoneHeight: 0.2
   m_DeadZoneDepth: 0
@@ -476,7 +476,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 22
+  field of view: 10
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -501,8 +501,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.23344536, y: 0, z: 0, w: 0.97236997}
-  m_LocalPosition: {x: -8.39, y: 22.726393, z: -35.48919}
+  m_LocalRotation: {x: 0.14780942, y: 0, z: 0, w: 0.9890159}
+  m_LocalPosition: {x: -8.39, y: 37.406506, z: -105.2561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -654,6 +654,7 @@ MonoBehaviour:
     type: 3}
   coolChunks:
   - {fileID: 8720417896239949057, guid: 1a7450e74e7de42368e5f895f03afc0b, type: 3}
+  randomSeed: 12345678
   gridSize: {x: 7, y: 7}
 --- !u!4 &2122779865
 Transform:
@@ -679,6 +680,11 @@ PrefabInstance:
     - target: {fileID: 514520741550280819, guid: f913a38bc6a374e468055e53c581e228,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 514520741550280819, guid: f913a38bc6a374e468055e53c581e228,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 514520741550280823, guid: f913a38bc6a374e468055e53c581e228,

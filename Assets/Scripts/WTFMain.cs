@@ -21,6 +21,8 @@ public class WTFMain : MonoBehaviour {
     public GameObject defaultChunk;
     public GameObject[] coolChunks;
 
+    public int randomSeed = 12345678;
+
     public Vector2Int gridSize = new Vector2Int(4, 3);
     public static Vector3 GetOffset(int gx, int gy) {
         float d = Mathf.Floor(gy / 2);
@@ -38,6 +40,7 @@ public class WTFMain : MonoBehaviour {
             .Where(c => !!c) // Make sure no nullified instance will pass.
             .ToArray();
 
+        Random.InitState(-1234567);
         for (int y = 0; y < gridSize.y; y++) {
             for (int x = 0; x < gridSize.x; x++) {
                 GameObject source = sourceChunks[Random.Range(0, sourceChunks.Length)];

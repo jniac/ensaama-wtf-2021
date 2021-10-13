@@ -9,6 +9,8 @@ public class Player : MonoBehaviour {
     public static Player player;
     
     void Awake() {
-        Player.player = this;
+        if (Player.player == null) {
+            Player.player = this;
+        }
     }
 }

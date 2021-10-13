@@ -9,6 +9,15 @@ using UnityEditor;
 [ExecuteAlways]
 public class WTFMain : MonoBehaviour {
 
+    [MenuItem("Tools/HideFlags/Unhide")]
+    static void Unhide() {
+        var scope = Selection.activeTransform;
+        while (scope) {
+            scope.gameObject.hideFlags = HideFlags.None;
+            scope = scope.parent;
+        }
+    }
+    
     public GameObject defaultChunk;
     public GameObject[] coolChunks;
 

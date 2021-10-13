@@ -55,10 +55,16 @@ public class RotationClamp : MonoBehaviour
         float t = Limited4Clamp01((x - min) / d);
         return min + t * d;
     }
+    
+    Quaternion smoothRotation;
+    
+    void Start() {
+        smoothRotation = transform.localRotation;
+    }
 
     void LateUpdate() {
         if (clampX || clampY) {
-            Vector3 euler = transform.eulerAngles;
+            Vector3 euler = transform.localEulerAngles;
 
             if (clampX) {
                 euler.x -= angleX;
@@ -76,17 +82,22 @@ public class RotationClamp : MonoBehaviour
                 euler.y += angleY;
             }
             
-            transform.eulerAngles = euler;
+            // transform.eulerAngles = euler;
+            // Smooth rotation via Slerp is better.
+            smoothRotation = Quaternion.Slerp(smoothRotation, Quaternion.Euler(euler), 0.4f);
+            transform.localRotation = smoothRotation;
         }
     }
 
     public float gizmosSize = 2f;
     void OnDrawGizmos() {
         Vector3 d = new Vector3();
+        // WARN: Very hazardous trigonometry. Should be rewritten.
+        var ay = transform.eulerAngles.y * Mathf.Deg2Rad;
         void DrawX(float a, float size) {
-            d.x = 0;
+            d.x = Mathf.Sin(ay);
             d.y = -Mathf.Sin(a * Mathf.Deg2Rad);
-            d.z = -Mathf.Cos(a * Mathf.Deg2Rad);
+            d.z = -Mathf.Cos(ay) * -Mathf.Cos(a * Mathf.Deg2Rad);
             Gizmos.DrawRay(transform.position, d * size);
         }
         void DrawY(float a, float size) {
@@ -101,8 +112,9 @@ public class RotationClamp : MonoBehaviour
             Gizmos.color = Color.red;
             count = Mathf.CeilToInt(fovX / step);
             // range
+            var x = transform.parent?.eulerAngles.x ?? 0;
             for (int i = 0; i <= count; i++) {
-                DrawX(angleX + fovX * (-0.5f + (float)i / count), gizmosSize);
+                DrawX(x + angleX + fovX * (-0.5f + (float)i / count), gizmosSize);
             }
             // current angle
             DrawX(transform.eulerAngles.x, gizmosSize * 1.5f);
@@ -111,8 +123,9 @@ public class RotationClamp : MonoBehaviour
             Gizmos.color = Color.green;
             count = Mathf.CeilToInt(fovY / step);
             // range
+            var y = transform.parent?.eulerAngles.y ?? 0;
             for (int i = 0; i <= count; i++) {
-                DrawY(angleY + fovY * (-0.5f + (float)i / count), gizmosSize);
+                DrawY(y + angleY + fovY * (-0.5f + (float)i / count), gizmosSize);
             }
             // current angle
             DrawY(transform.eulerAngles.y, gizmosSize * 1.5f);

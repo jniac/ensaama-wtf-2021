@@ -23,12 +23,24 @@ public class WTFMain : MonoBehaviour {
     public void Build() {
         Clear();
         var center = -GetOffset(gridSize.x - 1, gridSize.y - 1) / 2f;
+
+        var sourceChunks = new GameObject[] { defaultChunk }
+            .Concat(coolChunks)
+            .Where(c => !!c) // Make sure no nullified instance will pass.
+            .ToArray();
+
         for (int y = 0; y < gridSize.y; y++) {
             for (int x = 0; x < gridSize.x; x++) {
-                GameObject source = defaultChunk;
+                GameObject source = sourceChunks[Random.Range(0, sourceChunks.Length)];
                 GameObject instance = Instantiate(source, transform);
                 instance.hideFlags = HideFlags.HideInHierarchy | HideFlags.DontSave;
                 instance.transform.localPosition = center + GetOffset(x, y);
+                instance.transform.localRotation = Quaternion.identity;
+
+                // Make sure clone have a chunk on it.
+                if (instance.GetComponent<Chunk>() == null) {
+                    instance.AddComponent<Chunk>();
+                }
             }
         }
 

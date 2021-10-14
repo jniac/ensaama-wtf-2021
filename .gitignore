@@ -74,6 +74,7 @@ crashlytics-build.properties
 
 # Ignore for the moment
 TextMesh Pro
+TextMesh Pro.meta
 
 manifest.json
 packages-lock.json

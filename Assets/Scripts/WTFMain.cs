@@ -40,7 +40,7 @@ public class WTFMain : MonoBehaviour {
             .Where(c => !!c) // Make sure no nullified instance will pass.
             .ToArray();
 
-        Random.InitState(-1234567);
+        Random.InitState(randomSeed);
         for (int y = 0; y < gridSize.y; y++) {
             for (int x = 0; x < gridSize.x; x++) {
                 GameObject source = sourceChunks[Random.Range(0, sourceChunks.Length)];
@@ -79,6 +79,10 @@ public class WTFMain : MonoBehaviour {
         public override void OnInspectorGUI() {
             base.OnInspectorGUI();
             if (GUILayout.Button("(Re) Build")) {
+                Target.Build();
+            }
+            if (GUILayout.Button("Next randomSeed & Rebuild")) {
+                Target.randomSeed++;
                 Target.Build();
             }
             if (GUILayout.Button("Clear")) {

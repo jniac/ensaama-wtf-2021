@@ -77,4 +77,6 @@ TextMesh Pro
 
 manifest.json
 packages-lock.json
-ProjectVersion.txt
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/PackageManagerSettings.asset

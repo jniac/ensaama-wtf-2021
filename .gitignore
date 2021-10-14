@@ -76,7 +76,7 @@ crashlytics-build.properties
 TextMesh Pro
 TextMesh Pro.meta
 
-manifest.json
+# manifest.json
 packages-lock.json
 ProjectSettings/ProjectVersion.txt
 ProjectSettings/EditorBuildSettings.asset

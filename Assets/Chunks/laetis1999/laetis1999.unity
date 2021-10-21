@@ -282,40 +282,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 323557945988834107, guid: b9210b3dc10aac049aa419b57cd8ea12,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 323557945988834107, guid: b9210b3dc10aac049aa419b57cd8ea12,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303451159926620296, guid: b9210b3dc10aac049aa419b57cd8ea12,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303451159926620296, guid: b9210b3dc10aac049aa419b57cd8ea12,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.33
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303451159926620296, guid: b9210b3dc10aac049aa419b57cd8ea12,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.59
-      objectReference: {fileID: 0}
     - target: {fileID: 3005489312808302193, guid: b9210b3dc10aac049aa419b57cd8ea12,
         type: 3}
       propertyPath: m_Name
       value: ChunkLaetis1999
-      objectReference: {fileID: 0}
-    - target: {fileID: 7924907406904765754, guid: b9210b3dc10aac049aa419b57cd8ea12,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8711142371709870907, guid: b9210b3dc10aac049aa419b57cd8ea12,
         type: 3}

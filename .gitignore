@@ -73,7 +73,7 @@ crashlytics-build.properties
 .DS_Store
 
 # Ignore for the moment
-TextMesh Pro
+# TextMesh Pro
 TextMesh Pro.meta
 
 manifest.json

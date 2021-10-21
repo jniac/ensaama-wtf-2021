@@ -83,3 +83,5 @@ ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/PackageManagerSettings.asset
 UIElementsSchema
 Resources/BillingMode.json
+SceneTemplateSettings.json
+TimelineSettings.asset

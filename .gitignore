@@ -85,3 +85,5 @@ UIElementsSchema
 Resources/BillingMode.json
 WTFSettings.lighting
 WTFSettings.lighting.meta
+SceneTemplateSettings.json
+TimelineSettings.asset

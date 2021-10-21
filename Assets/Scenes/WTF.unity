@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4466393, g: 0.4964851, b: 0.57485384, a: 1}
+  m_IndirectSpecularColor: {r: 0.44663972, g: 0.49648547, b: 0.5748544, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,8 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 30e4e93d47e304277840a08305f99767,
-    type: 2}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -119,8 +118,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    maxJobWorkers: 0
-    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -376,7 +373,6 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -401,7 +397,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &728612353
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -600,6 +595,7 @@ MonoBehaviour:
   - {fileID: 2014835658724348335, guid: a6625519208204e5084bfbe3a9c9f229, type: 3}
   - {fileID: 6299226849599423089, guid: 130483d307121485aab8cba458b48f49, type: 3}
   - {fileID: 6801071087139439765, guid: 2eb0c2de77adc2944b48d21c7c9ef30d, type: 3}
+  - {fileID: 2885379048479734790, guid: 9d488608766ed42968b106fa04b610ff, type: 3}
   randomSeed: 12345678
   gridSize: {x: 7, y: 7}
 --- !u!4 &2122779865
@@ -756,6 +752,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022854837992298079, guid: 52015243774d84050b95533b2abf3442,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9022854839322631184, guid: 52015243774d84050b95533b2abf3442,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52015243774d84050b95533b2abf3442, type: 3}

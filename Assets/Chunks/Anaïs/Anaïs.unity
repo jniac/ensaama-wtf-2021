@@ -418,11 +418,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1247439661627440078, guid: 9d488608766ed42968b106fa04b610ff,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247439661627440078, guid: 9d488608766ed42968b106fa04b610ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e0158a71f405436b89ea534238cda84, type: 2}
     - target: {fileID: 2885379048479734790, guid: 9d488608766ed42968b106fa04b610ff,
         type: 3}
       propertyPath: m_Name
       value: "Ana\xEFs"
       objectReference: {fileID: 0}
+    - target: {fileID: 3881258544652961305, guid: 9d488608766ed42968b106fa04b610ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e0158a71f405436b89ea534238cda84, type: 2}
+    - target: {fileID: 3904398264935258486, guid: 9d488608766ed42968b106fa04b610ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e0158a71f405436b89ea534238cda84, type: 2}
+    - target: {fileID: 4695946410114847147, guid: 9d488608766ed42968b106fa04b610ff,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e0158a71f405436b89ea534238cda84, type: 2}
     - target: {fileID: 8744716947235023180, guid: 9d488608766ed42968b106fa04b610ff,
         type: 3}
       propertyPath: m_RootOrder

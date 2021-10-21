@@ -81,3 +81,5 @@ packages-lock.json
 ProjectSettings/ProjectVersion.txt
 ProjectSettings/EditorBuildSettings.asset
 ProjectSettings/PackageManagerSettings.asset
+UIElementsSchema
+Resources/BillingMode.json

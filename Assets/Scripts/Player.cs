@@ -13,4 +13,13 @@ public class Player : MonoBehaviour {
             Player.player = this;
         }
     }
+    
+    public void CameraTrack(bool force = false) {
+        Cinemachine.CinemachineVirtualCamera camera = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
+        if (camera != null) {
+            if (camera.Follow == null || force) {
+                camera.Follow = transform;
+            }
+        }
+    }
 }

@@ -15,12 +15,28 @@ public class CubeController : MonoBehaviour
 
     Rigidbody body;
     Grounded grounded;
+    new Collider collider;
+
+    // internal material
+    PhysicMaterial slip;
+    PhysicMaterial grip;
 
     void Start() {
         body = GetComponent<Rigidbody>();
         // Make sure no gravity applies in the physics loop.
         body.useGravity = false;
         grounded = GetComponent<Grounded>();
+        collider = GetComponent<Collider>();
+        slip = new PhysicMaterial("slip") {
+            staticFriction = 0,
+            dynamicFriction = 0,
+            frictionCombine = PhysicMaterialCombine.Minimum,
+        };
+        grip = new PhysicMaterial("gum") {
+            staticFriction = 1,
+            dynamicFriction = 1,
+            frictionCombine = PhysicMaterialCombine.Maximum,
+        };
     }
 
     void UpdateMove() {
@@ -62,6 +78,9 @@ public class CubeController : MonoBehaviour
     }
 
     void Update() {
+
+        // Update physic material according to "isGrounded" 
+        collider.material = grounded.isGrounded ? grip : slip;
         
         UpdateMove();
         UpdateJump();

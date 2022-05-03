@@ -88,3 +88,6 @@ WTFSettings.lighting.meta
 SceneTemplateSettings.json
 TimelineSettings.asset
 EditorSettings.asset
+
+boot.config
+MemorySettings.asset
